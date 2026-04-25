@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-vibrant-yellow: #FFD166;
+  --color-vibrant-pink: #EF476F;
+  --color-vibrant-blue: #118AB2;
+  --color-vibrant-green: #06D6A0;
+  --color-vibrant-dark: #073B4C;
+}
+
+body {
+  @apply bg-vibrant-yellow text-vibrant-dark font-sans min-h-screen;
+}
+
+.bento-card {
+  @apply bg-white border-4 border-black rounded-3xl p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-transform;
+}
+
+.bento-card-dark {
+  @apply bg-vibrant-dark border-4 border-black rounded-3xl p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] text-white;
+}
+
+.bento-card-accent {
+  @apply bg-vibrant-pink border-4 border-black rounded-3xl p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] text-white;
+}
+
+.brutalist-button {
+  @apply bg-white border-4 border-black px-6 py-3 rounded-2xl font-black uppercase tracking-tighter shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all;
+}
+
+.brutalist-button:hover {
+  @apply translate-x-0.5 translate-y-0.5;
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+}
+
+.brutalist-button:active {
+  @apply translate-x-1 translate-y-1;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+}
+
+.dot-pattern {
+  @apply absolute inset-0 opacity-20;
+  background-image: radial-gradient(circle_at_center, currentColor 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
